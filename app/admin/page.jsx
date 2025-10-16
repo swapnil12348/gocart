@@ -24,6 +24,9 @@ export default function AdminDashboard() {
         allOrders: [],
     })
 
+     console.log('State of dashboardData during render:', dashboardData);
+
+
     const dashboardCardsData = [
         { title: 'Total Products', value: dashboardData.products, icon: ShoppingBasketIcon },
         { title: 'Total Revenue', value: currency + dashboardData.revenue, icon: CircleDollarSignIcon },
@@ -35,7 +38,9 @@ export default function AdminDashboard() {
         try {
             const token=await getToken()
             const {data} = await axios.get('/api/admin/dashboard', {headers:{Authorization:`Bearer ${token}`}})
-            setDashboardData(data.dashboardData)
+             console.log('Full API Response from Axios (the "data" object):', data);
+        console.log('Value we are trying to set (data.dashboardData):', data.dashboardData);
+            setDashboardData(data)
         } catch (error) {
             toast.error(error?.response?.data?.error || error.message)
             
