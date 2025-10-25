@@ -1,35 +1,40 @@
 import prisma from "@/lib/prisma";
 import { NextResponse } from "next/server";
-// get store infor and products
-
-
 
 export async function GET(request) {
     try {
-        //get store usernmae from query params
-        const {searchParams} = new URL(request.url);
-        const username = searchParams.get('username').toLowerCase();
+        const { searchParams } = new URL(request.url);
+        
+        const usernameParam = searchParams.get('username');
+        if (!usernameParam) {
+            return NextResponse.json({ error: 'Missing required parameter: username' }, { status: 400 });
+        }
+        const username = usernameParam.toLowerCase();
 
-        if(!username){
-            return NextResponse.json({error: 'missing details: username'}, {status:400});
+        const store = await prisma.store.findFirst({
+            where: {
+                username: username,
+                isActive: true
+            },
+            include: {
+                // FIX: Changed 'product' to 'Product' to match the schema
+                Product: { 
+                    where: { inStock: true },
+                    include: {
+                        rating: true
+                    }
+                }
+            }
+        });
+
+        if (!store) {
+            return NextResponse.json({ error: 'Store not found or is inactive' }, { status: 404 });
         }
 
-        // get store info and in stock products with ratings
-
-
-        const store = await prisma.store.findUnique({
-            where: {username, isActive: true},
-            include:{product: {include: {rating: true}}}
-        })
-
-        if(!store){
-            return NextResponse.json({error: 'store not found'}, {status:400});
-        }
-
-        return NextResponse.json({store})
+        return NextResponse.json({ store }, { status: 200 });
 
     } catch (error) {
-        console.error(error);
-        return NextResponse.json({error: error.code || error.message}, {status:400});
+        console.error("API Error in /api/store/data:", error);
+        return NextResponse.json({ error: "An internal server error occurred." }, { status: 500 });
     }
 }
