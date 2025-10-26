@@ -33,7 +33,7 @@ export async function POST(request) {
 
                 }))
                 //delete cart from user
-                await prisma.cart.update({
+                await prisma.user.update({
                     where: {id: userId },
                     data: { cart: {} }
                 })
@@ -57,7 +57,7 @@ export async function POST(request) {
                 break
             }
 
-            case 'payment_intent.payment_failed': {
+            case 'payment_intent.canceled': {
                 await handlePaymentIntent(event.data.object.id, false);
                 break;
             }
