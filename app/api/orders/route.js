@@ -130,7 +130,7 @@ export async function POST(request) {
                 metadata : {
                     orderIds: orderIds.join(','),
                     userId,
-                    appid: 'gocart'
+                    appId: 'gocart'
                 }
             });
             return NextResponse.json({ session }, { status: 200 });
