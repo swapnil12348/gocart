@@ -262,6 +262,17 @@
 │   │   │   │   │   └── route.js.map
 │   │   │   │   │   └── route_client-reference-manifest.js
 │   │   │   │   └── store/
+│   │   │   │   │   └── ai/
+│   │   │   │   │   │   └── route/
+│   │   │   │   │   │   │   └── app-build-manifest.json
+│   │   │   │   │   │   │   └── app-paths-manifest.json
+│   │   │   │   │   │   │   └── build-manifest.json
+│   │   │   │   │   │   │   └── next-font-manifest.json
+│   │   │   │   │   │   │   └── react-loadable-manifest.json
+│   │   │   │   │   │   │   └── server-reference-manifest.json
+│   │   │   │   │   │   └── route.js
+│   │   │   │   │   │   └── route.js.map
+│   │   │   │   │   │   └── route_client-reference-manifest.js
 │   │   │   │   │   └── create/
 │   │   │   │   │   │   └── route/
 │   │   │   │   │   │   │   └── app-build-manifest.json
@@ -760,6 +771,8 @@
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_16073655.js.map
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_1d258425.js
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_1d258425.js.map
+│   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_3620b720.js
+│   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_3620b720.js.map
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_3b5fba21.js
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_3b5fba21.js.map
 │   │   │   └── node_modules_@clerk_nextjs_dist_esm_server_fs_middleware-location_4c382e5a.js
@@ -838,6 +851,8 @@
 │   │   │   └── node_modules_next_a8f181f2._.js.map
 │   │   │   └── node_modules_next_ab963b17._.js
 │   │   │   └── node_modules_next_ab963b17._.js.map
+│   │   │   └── node_modules_next_bd98165a._.js
+│   │   │   └── node_modules_next_bd98165a._.js.map
 │   │   │   └── node_modules_next_c28206ef._.js
 │   │   │   └── node_modules_next_c28206ef._.js.map
 │   │   │   └── node_modules_next_c5c0db06._.js
@@ -848,6 +863,8 @@
 │   │   │   └── node_modules_next_f06ee13c._.js.map
 │   │   │   └── node_modules_next_f684688f._.js
 │   │   │   └── node_modules_next_f684688f._.js.map
+│   │   │   └── node_modules_openai_4bdf9b42._.js
+│   │   │   └── node_modules_openai_4bdf9b42._.js.map
 │   │   │   └── node_modules_stripe_esm_a15cb40c._.js
 │   │   │   └── node_modules_stripe_esm_a15cb40c._.js.map
 │   │   │   └── node_modules_ws_f168ff37._.js
@@ -876,6 +893,8 @@
 │   │   │   └── [root-of-the-server]__4216d9ba._.js.map
 │   │   │   └── [root-of-the-server]__442b9001._.js
 │   │   │   └── [root-of-the-server]__442b9001._.js.map
+│   │   │   └── [root-of-the-server]__451f1d5c._.js
+│   │   │   └── [root-of-the-server]__451f1d5c._.js.map
 │   │   │   └── [root-of-the-server]__45b2f3e7._.js
 │   │   │   └── [root-of-the-server]__45b2f3e7._.js.map
 │   │   │   └── [root-of-the-server]__4e1eaaea._.js
@@ -1286,6 +1305,8 @@
 │   │   └── rating/
 │   │   │   └── route.js
 │   │   └── store/
+│   │   │   └── ai/
+│   │   │   │   └── route.js
 │   │   │   └── create/
 │   │   │   │   └── route.js
 │   │   │   └── dashboard/
@@ -1376,6 +1397,7 @@
 │   └── Title.jsx
 └── configs/
 │   └── imageKit.js
+│   └── openai.js
 └── inngest/
 │   └── client.js
 │   └── functions.js
