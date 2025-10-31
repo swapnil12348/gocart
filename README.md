@@ -1,6 +1,6 @@
 # GoCart - A Multi-Vendor E-Commerce Platform
 
-![Project Banner or Screenshot](https://via.placeholder.com/1200x600.png?text=GoCart+Marketplace)
+
 
 GoCart is a complete, feature-rich multi-vendor e-commerce marketplace built using the latest web technologies. It provides a seamless platform for customers to shop, sellers to manage their stores, and administrators to oversee the entire operation.
 
